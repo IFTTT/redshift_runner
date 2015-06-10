@@ -52,14 +52,14 @@ Query your cluster with the simple command:
 
 Results will be returned as a `RedshiftRunner::Result` object, which responds to the following methods: 
 
- * query_started_at: timestamp of query execution start
- * query_ended_at: timestamp of query execution end
- * query_duration_seconds: floating point query duration
- * status: status of query
- * message: longer description of query status
- * rows_affected: count of rows affected (for `insert` queries)
- * results: query result set represented as array containing one hash per row of results
- * query: sql query string executed
+ * `query_started_at`: timestamp of query execution start
+ * `query_ended_at`: timestamp of query execution end
+ * `query_duration_seconds`: floating point query duration
+ * `status`: status of query
+ * `message`: longer description of query status
+ * `rows_affected`: count of rows affected (for `insert` queries)
+ * `results`: query result set represented as array containing one hash per row of results
+ * `query`: sql query string executed
 
 
 Example usage:
