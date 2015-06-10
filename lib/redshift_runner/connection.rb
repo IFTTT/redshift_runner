@@ -1,11 +1,11 @@
 module RedshiftRunner
   class Connection   
 
-    def self.establish_readonly
+    def self.establish_readonly(*args)
       @readonly ||= new(*args)
     end
 
-    def self.establish_readwrite
+    def self.establish_readwrite(*args)
       @readwrite ||= new(*args)
     end
 
