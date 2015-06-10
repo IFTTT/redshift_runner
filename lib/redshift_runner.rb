@@ -5,11 +5,10 @@ require "pg"
 
 module RedshiftRunner
 
-  # def self.exec_query(query_str, readonly=false)
-  def self.exec_query(query_str, connection=:default)    
+  def self.exec_query(query_str, connection_name='default')    
     start_time = DateTime.now    
     begin
-      Connection.send(connection).send(:exec_params, query_str)
+      Connection.fetch(connection_name).exec_params(query_str)
     rescue PG::Error => err
       err.result
     end

@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = RedshiftRunner::VERSION
   spec.authors       = ["Matt Boys"]
   spec.email         = ["matt@ifttt.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "Handles Redshift connection, querying, and wraps result set"
+  spec.description   = ""
   spec.homepage      = ""
   spec.license       = "MIT"
 

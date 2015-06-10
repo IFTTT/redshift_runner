@@ -1,21 +1,5 @@
 module RedshiftRunner
-  class Connection   
-
-    def self.establish_readonly(*args)
-      @readonly ||= new(*args)
-    end
-
-    def self.establish_readwrite(*args)
-      @readwrite ||= new(*args)
-    end
-
-    def self.readonly
-      @readonly
-    end
-
-    def self.readwrite
-      @readwrite
-    end
+  class Connection
 
     def initialize(host, port, user, password, dbname)
       PG::Connection.new(
@@ -26,5 +10,15 @@ module RedshiftRunner
         :dbname => dbname,
       )
     end
+
+    def self.establish(connection_name, *args)
+      instance_variable_set "@#{connection_name}", new(*args)
+      true
+    end
+
+    def self.fetch(connection_name)
+      instance_variable_get "@#{connection_name}"
+    end
+
   end
 end
