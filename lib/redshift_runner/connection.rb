@@ -1,8 +1,10 @@
 module RedshiftRunner
   class Connection
 
+    attr_reader :conn
+
     def initialize(host, port, user, password, dbname)
-      PG::Connection.new(
+      @conn = PG::Connection.new(
         :host => host,
         :port => port,
         :user => user,
