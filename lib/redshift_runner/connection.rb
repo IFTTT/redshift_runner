@@ -19,7 +19,11 @@ module RedshiftRunner
     end
 
     def self.fetch(connection_name)
-      instance_variable_get "@#{connection_name}"
+      begin
+        instance_variable_get "@#{connection_name}"
+      rescue
+        raise "No Redshift connection found named '#{connection_name}'" and return
+      end
     end
 
   end
