@@ -8,7 +8,7 @@ module RedshiftRunner
   def self.exec_query(query_str, connection_name='default')    
     start_time = DateTime.now    
     begin
-      Connection.fetch(connection_name).exec_params(query_str)
+      Connection.fetch(connection_name).conn.exec_params(query_str)
     rescue PG::Error => err
       err.result
     end
