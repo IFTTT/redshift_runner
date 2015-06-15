@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "redshift_runner"
   spec.version       = RedshiftRunner::VERSION
   spec.authors       = ["Matt Boys"]
-  spec.email         = ["matt@ifttt.com"]
+  spec.email         = ["ops@ifttt.com"]
   spec.summary       = "Handles Redshift connection, querying, and wraps result set"
   spec.description   = ""
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ifttt/redshift_runner"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
