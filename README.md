@@ -2,6 +2,9 @@
 
 RedshiftRunner is your one-stop shop for connecting to one or more Redshift instances, executing queries, and returning result sets with useful metadata.
 
+## Deprecated
+This project is not being developed. Feel free to fork!
+
 ## Installation
 
 Add this line to your application's Gemfile:
